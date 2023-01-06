@@ -1,24 +1,26 @@
 # Dart-Flutter-study-blog
 > Dart와 Flutter를 공부한 내용을 기록하는 저장소입니다.
 
+## 🎯 Dart
 ### Dart의 컴파일러
-Dart는 두개의 컴파일러를 가진다. 
 
-✔️ **dart web**
-→ dart로 쓴 코드를 javascript로 변환해주는 컴파일러
+1. **dart web**
 
-✔️ **dart native**(machine code JIT and AOT)
-→ dart로 쓴 코드를 여러 CPU의 아키택쳐에 맞게 변환해주는 컴파일러
-> 따라서 IOS, Android, Windows, Linux, Mac 등으로 컴파일 할 수 있기에 선택!
+   → dart로 쓴 코드를 javascript로 변환해주는 컴파일러
 
-* JIT (just-in-time) 
-→ 개발할 때.
-→ dart VM을 사용.
-→ 코드의 결과를 바로 화면에 보여줌.(개발 경험이 좋다!!)
+2. **dart native**(machine code JIT and AOT)
 
-* AOT (ahead-of-time)
-→ 배포할 때.
-→ 컴파일을 먼저하고, 그 결과인 바이너리(CPU가 이해할 수 있는 기계어)를 배포한다.
+   → dart로 쓴 코드를 여러 CPU의 아키택쳐에 맞게 변환해주는 컴파일러
+   > 따라서 IOS, Android, Windows, Linux, Mac 등으로 컴파일 O
+
+   * JIT (just-in-time) <br>
+   → 개발할 때. <br>
+   → dart VM을 사용.<br>
+   → 코드의 결과를 바로 화면에 보여줌.(개발 경험이 좋다!!)<br>
+
+   * AOT (ahead-of-time)<br>
+   → 배포할 때.<br>
+   → 컴파일을 먼저하고, 그 결과인 바이너리(CPU가 이해할 수 있는 기계어)를 배포한다.<br>
 
 
 ### Variables
