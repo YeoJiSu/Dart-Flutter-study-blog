@@ -29,3 +29,36 @@
 - const: 컴파일 할 때 값을 알고 있는 변수
 - final: 런타임 중에 만들어질 수 있는 변수
 - late: final, var, String같은 것들 앞에 써줄 수 있는 수식어로서 어떤 데이터가 올 지 모르는 변수
+
+### Data Types
+dart는 객체 지향 언어이다.
+
+- Lists
+- String Interpolation
+- Collection For
+- Maps
+- Sets
+
+### Functions
+- Named parameters
+
+    - function을 호출할 때 position parameter를 쓰는 것보다 named argument 쓰는 것이 좋음.
+    - named argument를 사용하면, 바로 확인할 수 있어서 좋고 순서가 상관이 없음.
+    - function의 변수를 'required'로 바꿔 주거나 파라미터를 기본 값을 만듦으로써 null 들어오는 것 방지.
+
+- Optional positional parameters
+- QQ operator
+- Typedef
+
+
+
+### Classes
+- Constructors
+- Named constructor Parameters
+- Named Constructors
+- Cascade Notation
+- Enums
+- Abstract Classes
+- Inheritance
+- Mixins
+- Conclusions
