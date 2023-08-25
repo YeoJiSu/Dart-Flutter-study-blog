@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:toonflix/models/webtoon_model.dart';
 import 'package:toonflix/services/api_service.dart';
+import 'package:toonflix/widgets/webtoon_widget.dart';
 
 // ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
@@ -25,46 +26,44 @@ class HomeScreen extends StatelessWidget {
         future: webtoons,
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return ListView.separated(
-              scrollDirection: Axis.horizontal,
-              itemCount: snapshot.data!.length,
-              // 한번에 다 호출하지 않고, 필요할 때만 호출이 된다 !! 굉장히 큰 장점임.
-              itemBuilder: (context, index) {
-                print(index);
-                var webtoon = snapshot.data![index];
-                return Text(webtoon.title);
-              },
-              separatorBuilder: (context, index) => const SizedBox(
-                width: 20,
-              ),
-            );
-
-            /*
-            return ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: snapshot.data!.length,
-              // 한번에 다 호출하지 않고, 필요할 때만 호출이 된다 !! 굉장히 큰 장점임.
-              itemBuilder: (context, index) {
-                print(index);
-                var webtoon = snapshot.data![index];
-                return Text(webtoon.title);
-              },
-            );
-            */
-
-            /*
-            // 그냥 ListView는 최적화되지 못한다.
-            return ListView(
+            return Column(
               children: [
-                for (var webtoon in snapshot.data!) Text(webtoon.title),
+                const SizedBox(
+                  height: 50,
+                ),
+                Expanded(
+                  // expanded를 넣어줘야 height 에러가 뜨지 않는다.
+                  child: makeList(snapshot),
+                ),
               ],
             );
-            */
           }
           return const Center(
             child: CircularProgressIndicator(),
           );
         },
+      ),
+    );
+  }
+
+  ListView makeList(AsyncSnapshot<List<WebtoonModel>> snapshot) {
+    return ListView.separated(
+      scrollDirection: Axis.horizontal,
+      itemCount: snapshot.data!.length,
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+      // 한번에 다 호출하지 않고, 필요할 때만 호출이 된다 !! 굉장히 큰 장점임.
+      itemBuilder: (context, index) {
+        print(index);
+        var webtoon = snapshot.data![index];
+        return Webtoon(
+          title: webtoon.title,
+          thumb: webtoon.thumb,
+          id: webtoon.id,
+        );
+      },
+      // 아이템들 사이의 간격을 주는 builder
+      separatorBuilder: (context, index) => const SizedBox(
+        width: 40,
       ),
     );
   }

@@ -14,7 +14,7 @@ class App extends StatelessWidget {
   @override // auto complete 됨.
   Widget build(BuildContext context) {
     // material(구글) 또는 cupertino(ios) 위젯을 return
-    return const MaterialApp(
+    return MaterialApp(
       home: HomeScreen(),
     );
   }
