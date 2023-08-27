@@ -1,2 +1,4 @@
 ## 📱 Webtoon App
-<img width="400" src="https://github.com/YeoJiSu/Dart-Flutter-study-blog/assets/76769044/4f61ce42-03b5-4976-908e-040ea8b54d5b"/>
+
+https://github.com/YeoJiSu/Dart-Flutter-study-blog/assets/76769044/273ded80-e28e-4b14-8a04-0dc0bb1851e8
+
